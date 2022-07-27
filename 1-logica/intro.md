@@ -28,3 +28,7 @@ El pseudocódigo es una forma de escribir los pasos que va a realizar un program
 
 
 
+
+
+
+
