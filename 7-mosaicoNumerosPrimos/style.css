@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Uchen', serif;
+}
+
+#numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 15px;
+    margin: 20px;
+}
+
+.primo__si, 
+.primo__no {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 35px;
+}
+
+.primo__si {
+    background-color: rgb(51, 215, 92);
+}
+
+.primo__no {
+    background-color: purple;
+}
+
+

@@ -143,12 +143,39 @@ console.log(sub.subtract(12, 6))
 class Dates {
     constructor () {
     }
-    today(){
-        return new Date()
+    today(type){
+        switch (type){
+            case 'day':
+                return new Date().getDate();
+        default:
+            return new Date ()
+        }
     }
-
 }
 
 const date = new Dates()
-console.log(date.today())
+console.log('Date ' + date.today())
+console.log('Day ' + date.today('day'))
+
+// JavaScript Promise
+
+const helloWorld = (name) => {
+    return new Promise((resolve, reject) => {
+        if(name === 'Maria'){
+            resolve('Hello World')
+        } else {
+            reject ('error')
+        }
+    })
+}
+
+helloWorld('Mario').
+    then(response => {
+        console.log('Function executed correctly')
+        console.log(response)
+    })
+    .catch((error) => {
+        console.log('The function has an error')
+        console.log(error)
+    })
 
