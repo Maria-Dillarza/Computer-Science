@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar is-danger is-fixed-top">
+            <div class="navbar-item">
+                <div class="field">
+                    <p class="control has-icons-left has-icons-right">
+                        <input class="input" type="text" name="buscar" id="buscar" placeholder="Introduce el nombre">
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </p>
+                </div>
+            </div>
+<!--             <div class="navbar-item">
+                <button class="button is-link" id="es-agua">Water</button>
+            </div>
+            <div class="navbar-item">
+                <button class="button is-info" id="es-dos-tipos">2 types</button>
+            </div> -->
+            <div class="navbar-item">
+                <div class="select">
+                <select name="pokemon_type" id="pokemon_type">
+                        <option value="">Todos los tipos</option>
+                        <option value="steel">Acero</option>
+                        <option value="water">Agua</option>
+                        <option value="bug">Bicho</option>
+                        <option value="dragon">Dragón</option>
+                        <option value="electico">Eléctrico</option>
+                        <option value="ghost">Fantasma</option>
+                        <option value="fire">Fuego</option>
+                        <option value="fairy">Hada</option>
+                        <option value="ice">Hielo</option>
+                        <option value="fighting">Lucha</option>
+                        <option value="normal">Normal</option>
+                        <option value="grass">Planta</option>
+                        <option value="psychic">Psíquico</option>
+                        <option value="rock">Roca</option>
+                        <option value="dark">Siniestro</option>
+                        <option value="ground">Tierra</option>
+                        <option value="poison">Veneno</option>
+                        <option value="flying">Volador</option>
+                    </select>
+                </div>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <button class="button is-dark" id="reset">Reiniciar</button>
+                        <button class="button is-warning" id="favoritos"><span class="icon"><i class="fa fa-star"></i></span><span>Mis favoritos</span></button>
+                        <button class="button is-white" id="ascendente">Ascendente</button>
+                        <button class="button is-white" id="descendente">Descendente</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="section">
+        <div class="container">
+            <h3 class="has-text-weight-semibold is-size-4 my-4">¿Quién ese ese pokemon?</h3>
+            <div class="columns is-multiline" id="listado">
+            </div>
+        </div>
+    </section>
+    <aside id="mis-favoritos" class="is-hidden">
+        <h2 class="is-size-5 mb-3 has-text-weight-semibold has-text-centered">Mis favoritos</h2>
+        <div id="listado-favoritos">
+            
+        </div>
+    </aside>
+    <div class="modal" id="popup">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title" id="name"></p>
+                <button id="delete" class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="columns">
+                    <div class="column is-6">
+                        <img src="" id="imagen">
+                    </div>
+                    <div class="column">
+                        <h2 class="is-size-5 has-text-weight-semibold"  > No. <span id="number"></span> </h2>
+                        <p><span class="mt-5" id="tags"></span></p>
+                        <p class="mt-5"><b>Altura</b> <span id="altura"></span></p>
+                        <p><b>Peso</b> <span id="peso"></span></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
